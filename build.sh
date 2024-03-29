@@ -31,7 +31,7 @@ make_iso () {
   printf_line $copy_kernel
   $($copy_kernel)
 
-  copy_grub="cp /usr/lib/grub/i386-pc/boot.img isodir/boot/"
+  copy_grub="cp grub.cfg isodir/boot/"
   printf_line $copy_grub
   $($copy_grub)
 
