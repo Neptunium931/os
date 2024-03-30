@@ -13,7 +13,7 @@ build_kernel_bin () {
   printf_line $build_boot
   $($build_boot)
 
-  build_kernel="i686-elf-as kernel.s -o kernel.o"
+  build_kernel="i686-elf-gcc -c kernel.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra"
   printf_line $build_kernel
   $($build_kernel)
 
@@ -31,7 +31,7 @@ make_iso () {
   printf_line $copy_kernel
   $($copy_kernel)
 
-  copy_grub="cp grub.cfg isodir/boot/"
+  copy_grub="cp grub.cfg isodir/boot/grub"
   printf_line $copy_grub
   $($copy_grub)
 
