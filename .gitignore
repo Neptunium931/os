@@ -5,3 +5,4 @@ isodir
 *.img
 .cache
 venv
+compile_commands.json
