@@ -2,6 +2,14 @@
 
 set -e
 
+grupVersion() {
+	if command -v grub-file >/dev/null 2>&1; then
+		echo "grub"
+	elif command -v grub2-file >/dev/null 2>&1; then
+		echo "grub2"
+	fi
+}
+
 printf_line() {
 	line=$@
 	printf "%s " ${line[@]}
@@ -35,7 +43,7 @@ make_iso() {
 	printf_line $copy_grub
 	$($copy_grub)
 
-	create_iso="grub2-mkrescue -o os.iso isodir"
+	create_iso=$grub"-mkrescue -o os.iso isodir"
 	printf_line $create_iso
 	$($create_iso)
 }
@@ -43,7 +51,7 @@ make_iso() {
 all() {
 	build_kernel_bin
 
-	if grub2-file --is-x86-multiboot kernel.bin; then
+	if $grub-file --is-x86-multiboot kernel.bin; then
 		printf_line "multiboot confirmed"
 	else
 		printf_line "the file is not multiboot"
@@ -78,6 +86,8 @@ mrpoper() {
 commands() {
 	venv/bin/intercept-build ./build.sh all
 }
+
+grub=$(grupVersion)
 
 if [[ $1 = "clean" ]]; then
 	clean
