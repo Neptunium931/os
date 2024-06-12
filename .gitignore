@@ -4,3 +4,4 @@ isodir
 *.iso
 *.img
 .cache
+venv

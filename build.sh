@@ -13,7 +13,7 @@ build_kernel_bin() {
 	printf_line $build_boot
 	$($build_boot)
 
-	build_kernel="i686-elf-gcc -c ./src/kernel/kernel.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra"
+	build_kernel="i686-elf-gcc -c ./src/kernel/kernel.c -o kernel.o -std=c99 -ffreestanding -O2 -Wall -Wextra"
 	printf_line $build_kernel
 	$($build_kernel)
 
@@ -75,6 +75,10 @@ mrpoper() {
 	$($clean_dir)
 }
 
+commands() {
+	venv/bin/intercept-build ./build.sh all
+}
+
 if [[ $1 = "clean" ]]; then
 	clean
 elif [[ $1 = "mrpoper" ]]; then
@@ -85,6 +89,8 @@ elif [[ $1 = "" ]]; then
 	all
 elif [[ $1 = "build" ]]; then
 	build_kernel_bin
+elif [[ $1 = "commands" ]]; then
+	commands
 else
 	printf "invalid argument"
 	exit 1
