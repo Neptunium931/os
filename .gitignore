@@ -7,3 +7,4 @@ isodir
 venv
 compile_commands.json
 .mypy_cache
+tags
