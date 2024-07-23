@@ -6,3 +6,4 @@ isodir
 .cache
 venv
 compile_commands.json
+.mypy_cache
