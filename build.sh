@@ -28,10 +28,10 @@ buildFlopy="dd if=/dev/zero of=src/floppy.img bs=512 count=2880"
 printf_line $buildFlopy
 $($buildFlopy)
 
-burnBoot0="dd if=src/bootloader/boot0.bin of=src/floppy.img bs=512 seek=0"
+burnBoot0="dd if=src/bootloader/boot0.bin of=src/floppy.img bs=512 seek=0 conv=notrunc"
 printf_line $burnBoot0
 $($burnBoot0)
 
-burnBoot1="dd if=src/bootloader/boot1.bin of=src/floppy.img bs=512 seek=1"
+burnBoot1="dd if=src/bootloader/boot1.bin of=src/floppy.img bs=512 seek=1 conv=notrunc"
 printf_line $burnBoot1
 $($burnBoot1)
