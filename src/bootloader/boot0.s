@@ -18,6 +18,9 @@ movw ss, ax
 # set up stack
 movw sp, 0x7c00
 
+# enable interrupts
+sti
+
 # reset floppy controller
 movb ah, 0x0000
 int  0x13
