@@ -1,7 +1,6 @@
 .intel_syntax noprefix
 .code16
 
-.org 0x1000
 .text
 
 movb al, 'S'
