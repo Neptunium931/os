@@ -9,3 +9,5 @@ int  0x10
 
 # set up stack
 movw sp, 0x1000
+
+.org 512*2
