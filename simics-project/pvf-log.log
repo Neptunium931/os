@@ -1,0 +1,26 @@
+[INFO]  - Loaded window, loading webpage... 
+[INFO]  - Current execution mode: production 
+[INFO]  - Loading the layout file - /home/neptunium/dev/os/simics-project/logs/config_machine0.pvf_dsb 
+[INFO]  - Loaded the layout file. 
+[INFO]  - PVFChart Connected the connector, start rendering. 
+[INFO]  - CSVConnectorB CSV connector connected. 
+[INFO]  - PVFChart Registered the connector. 
+[INFO]  - PVFChart Initialized the chart - key: a. 
+[INFO]  - PVFChart Connected the connector, start rendering. 
+[INFO]  - CSVConnectorB CSV connector connected. 
+[INFO]  - PVFChart Registered the connector. 
+[INFO]  - PVFChart Initialized the chart - key: b. 
+[INFO]  - PVFChart Connected the connector, start rendering. 
+[INFO]  - CSVConnectorB CSV connector connected. 
+[INFO]  - PVFChart Registered the connector. 
+[INFO]  - PVFChart Initialized the chart - key: c. 
+[INFO]  - PVFChart Connected the connector, start rendering. 
+[INFO]  - CSVConnectorB CSV connector connected. 
+[INFO]  - PVFChart Registered the connector. 
+[INFO]  - PVFChart Initialized the chart - key: d. 
+[INFO]  - CSVConnectorB Stream monitor: monitoring pvf-stream://stream-host/file?path=/home/neptunium/dev/os/simics-project/logs/sim_result/tracer0.csv. 
+[INFO]  - CSVConnectorB Stream monitor: monitoring pvf-stream://stream-host/file?path=/home/neptunium/dev/os/simics-project/logs/sim_result/tracer0.csv. 
+[INFO]  - CSVConnectorB Stream monitor: monitoring pvf-stream://stream-host/file?path=/home/neptunium/dev/os/simics-project/logs/sim_result/tracer0.csv. 
+[INFO]  - CSVConnectorB Stream monitor: monitoring pvf-stream://stream-host/file?path=/home/neptunium/dev/os/simics-project/logs/sim_result/tracer0.csv. 
+[ERROR] - Cannot read global profile file. {"errno":-2,"code":"ENOENT","syscall":"open","path":"/home/neptunium/.viewer/profiles.json"}
+[INFO]  - Exiting the pvf... 

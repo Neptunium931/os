@@ -1,0 +1,439 @@
+{
+	"layout": [
+		{
+			"w": 12,
+			"h": 10,
+			"x": 0,
+			"y": 0,
+			"i": "a",
+			"moved": false,
+			"static": false,
+			"resizeHandles": [
+				"s",
+				"e"
+			]
+		},
+		{
+			"w": 12,
+			"h": 10,
+			"x": 0,
+			"y": 10,
+			"i": "b",
+			"moved": false,
+			"static": false,
+			"resizeHandles": [
+				"s",
+				"e"
+			]
+		},
+		{
+			"w": 12,
+			"h": 10,
+			"x": 0,
+			"y": 20,
+			"i": "c",
+			"moved": false,
+			"static": false,
+			"resizeHandles": [
+				"s",
+				"e"
+			]
+		},
+		{
+			"w": 12,
+			"h": 10,
+			"x": 0,
+			"y": 30,
+			"i": "d",
+			"moved": false,
+			"static": false,
+			"resizeHandles": [
+				"s",
+				"e"
+			]
+		}
+	],
+	"children": [
+		{
+			"fig_config": {
+				"data": {
+					"embedded": {},
+					"external": {
+						"file": "sim_result/tracer0.csv",
+						"url": "",
+						"enableStream": true
+					}
+				},
+				"configurations": {
+					"height": "100%",
+					"width": "100%",
+					"type": "pvf_Dash",
+					"trace_type": "Line Charts",
+					"synchronization_signal": "_inner_zoomsync_signal",
+					"perfMode": "perf_opt1",
+					"legends": [
+						".*"
+					],
+					"scripts": {
+						"preprocessor": "// Compile regular expression\nconst regProcessor = new RegExp(/**Put your regexp here */);\n\n// Customized preprocessor snippet.\nfunction processor(input){\n    /* Beginning of the code */\n    /* DO NOT EDIT ANY CODE ABOVE! */\n    const result = regProcessor.exec(input);\n    if (result===null){\n        return null;\n    }\n    /* Format your data here */\n\n    /**\n     * Example:\n     *      name = result[0] + \"_name\";\n     *      x = parseFloat(result[1]) * 100;\n     */\n    \n    /* End format data */\n    return{\n        x: [/* Single x data */],\n        y: [/* Single y data */],\n        name: \"\",   /* Specify the data name. */\n        type: \"scattergl\",\n        mode: \"lines\"\n    }\n    /* Ending of the code */\n}\n",
+						"fileprocessor": "",
+						"postprocessor": ""
+					},
+					"csvLoader": [
+						{
+							"name": "P_core0",
+							"style": {}
+						},
+						{
+							"name": "P_core1",
+							"style": {}
+						},
+						{
+							"name": "P_core2",
+							"style": {}
+						}
+					]
+				},
+				"dash": {
+					"layout": {
+						"title": {
+							"text": "Power per core",
+							"font": {
+								"color": "#222"
+							}
+						},
+						"paper_bgcolor": "#fff",
+						"plot_bgcolor": "#fff",
+						"font": {
+							"color": "#222"
+						},
+						"autosize": true,
+						"xaxis": {
+							"title": {
+								"text": "timing [ps]"
+							},
+							"range": [
+								61419401000,
+								118404401000
+							],
+							"exponentformat": "e",
+							"autorange": true,
+							"type": "linear"
+						},
+						"yaxis": {
+							"title": {
+								"text": "Power [W]"
+							},
+							"range": [
+								-0.45568812488415694,
+								8.94468626624727
+							],
+							"autorange": true,
+							"type": "linear"
+						},
+						"legend": {
+							"x": 0,
+							"y": -0.5,
+							"font": {
+								"size": 10
+							},
+							"orientation": "h"
+						}
+					}
+				}
+			},
+			"key": "a"
+		},
+		{
+			"fig_config": {
+				"data": {
+					"embedded": {},
+					"external": {
+						"file": "sim_result/tracer0.csv",
+						"url": "",
+						"enableStream": true
+					}
+				},
+				"configurations": {
+					"height": "100%",
+					"width": "100%",
+					"type": "pvf_Dash",
+					"trace_type": "Line Charts",
+					"synchronization_signal": "_inner_zoomsync_signal",
+					"perfMode": "perf_opt1",
+					"legends": [
+						".*"
+					],
+					"scripts": {
+						"preprocessor": "// Compile regular expression\nconst regProcessor = new RegExp(/**Put your regexp here */);\n\n// Customized preprocessor snippet.\nfunction processor(input){\n    /* Beginning of the code */\n    /* DO NOT EDIT ANY CODE ABOVE! */\n    const result = regProcessor.exec(input);\n    if (result===null){\n        return null;\n    }\n    /* Format your data here */\n\n    /**\n     * Example:\n     *      name = result[0] + \"_name\";\n     *      x = parseFloat(result[1]) * 100;\n     */\n    \n    /* End format data */\n    return{\n        x: [/* Single x data */],\n        y: [/* Single y data */],\n        name: \"\",   /* Specify the data name. */\n        type: \"scattergl\",\n        mode: \"lines\"\n    }\n    /* Ending of the code */\n}\n",
+						"fileprocessor": "",
+						"postprocessor": ""
+					},
+					"csvLoader": [
+						{
+							"name": "T_core0",
+							"style": {}
+						},
+						{
+							"name": "T_core1",
+							"style": {}
+						},
+						{
+							"name": "T_core2",
+							"style": {}
+						}
+					]
+				},
+				"dash": {
+					"layout": {
+						"title": {
+							"text": "Temperature per core",
+							"font": {
+								"color": "#222"
+							}
+						},
+						"paper_bgcolor": "#fff",
+						"plot_bgcolor": "#fff",
+						"font": {
+							"color": "#222"
+						},
+						"autosize": true,
+						"xaxis": {
+							"title": {
+								"text": "timing [ps]"
+							},
+							"range": [
+								61419401000,
+								118404401000
+							],
+							"exponentformat": "e",
+							"autorange": true,
+							"type": "linear"
+						},
+						"yaxis": {
+							"title": {
+								"text": "Temperature [°C]"
+							},
+							"range": [
+								36.913159658319245,
+								98.6928150863821
+							],
+							"autorange": true,
+							"type": "linear"
+						},
+						"legend": {
+							"x": 0,
+							"y": -0.5,
+							"font": {
+								"size": 10
+							},
+							"orientation": "h"
+						}
+					}
+				}
+			},
+			"key": "b"
+		},
+		{
+			"fig_config": {
+				"data": {
+					"embedded": {},
+					"external": {
+						"file": "sim_result/tracer0.csv",
+						"url": "",
+						"enableStream": true
+					}
+				},
+				"configurations": {
+					"height": "100%",
+					"width": "100%",
+					"type": "pvf_Dash",
+					"trace_type": "Line Charts",
+					"synchronization_signal": "_inner_zoomsync_signal",
+					"perfMode": "perf_opt1",
+					"legends": [
+						".*"
+					],
+					"scripts": {
+						"preprocessor": "// Compile regular expression\nconst regProcessor = new RegExp(/**Put your regexp here */);\n\n// Customized preprocessor snippet.\nfunction processor(input){\n    /* Beginning of the code */\n    /* DO NOT EDIT ANY CODE ABOVE! */\n    const result = regProcessor.exec(input);\n    if (result===null){\n        return null;\n    }\n    /* Format your data here */\n\n    /**\n     * Example:\n     *      name = result[0] + \"_name\";\n     *      x = parseFloat(result[1]) * 100;\n     */\n    \n    /* End format data */\n    return{\n        x: [/* Single x data */],\n        y: [/* Single y data */],\n        name: \"\",   /* Specify the data name. */\n        type: \"scattergl\",\n        mode: \"lines\"\n    }\n    /* Ending of the code */\n}\n",
+						"fileprocessor": "",
+						"postprocessor": ""
+					},
+					"csvLoader": [
+						{
+							"name": "F_core0",
+							"style": {}
+						},
+						{
+							"name": "F_core1",
+							"style": {}
+						},
+						{
+							"name": "F_core2",
+							"style": {}
+						}
+					]
+				},
+				"dash": {
+					"layout": {
+						"title": {
+							"text": "Clock frequency per core",
+							"font": {
+								"color": "#222"
+							}
+						},
+						"paper_bgcolor": "#fff",
+						"plot_bgcolor": "#fff",
+						"font": {
+							"color": "#222"
+						},
+						"autosize": true,
+						"xaxis": {
+							"title": {
+								"text": "timing [ps]"
+							},
+							"range": [
+								58070317300.06946,
+								121753484699.93054
+							],
+							"exponentformat": "e",
+							"autorange": true,
+							"type": "linear"
+						},
+						"yaxis": {
+							"title": {
+								"text": "Frequency [GHz]"
+							},
+							"range": [
+								0.0,
+								6.0
+							],
+							"autorange": true,
+							"type": "linear"
+						},
+						"legend": {
+							"x": 0,
+							"y": -0.5,
+							"font": {
+								"size": 10
+							},
+							"orientation": "h"
+						}
+					}
+				}
+			},
+			"key": "c"
+		},
+		{
+			"fig_config": {
+				"data": {
+					"embedded": {},
+					"external": {
+						"file": "sim_result/tracer0.csv",
+						"url": "",
+						"enableStream": true
+					}
+				},
+				"configurations": {
+					"height": "100%",
+					"width": "100%",
+					"type": "pvf_Dash",
+					"trace_type": "Line Charts",
+					"synchronization_signal": "_inner_zoomsync_signal",
+					"perfMode": "perf_opt1",
+					"legends": [
+						".*"
+					],
+					"scripts": {
+						"preprocessor": "// Compile regular expression\nconst regProcessor = new RegExp(/**Put your regexp here */);\n\n// Customized preprocessor snippet.\nfunction processor(input){\n    /* Beginning of the code */\n    /* DO NOT EDIT ANY CODE ABOVE! */\n    const result = regProcessor.exec(input);\n    if (result===null){\n        return null;\n    }\n    /* Format your data here */\n\n    /**\n     * Example:\n     *      name = result[0] + \"_name\";\n     *      x = parseFloat(result[1]) * 100;\n     */\n    \n    /* End format data */\n    return{\n        x: [/* Single x data */],\n        y: [/* Single y data */],\n        name: \"\",   /* Specify the data name. */\n        type: \"scattergl\",\n        mode: \"lines\"\n    }\n    /* Ending of the code */\n}\n",
+						"fileprocessor": "",
+						"postprocessor": ""
+					},
+					"csvLoader": [
+						{
+							"name": "IPC_core0",
+							"style": {}
+						},
+						{
+							"name": "IPC_core1",
+							"style": {}
+						},
+						{
+							"name": "IPC_core2",
+							"style": {}
+						}
+					]
+				},
+				"dash": {
+					"layout": {
+						"title": {
+							"text": "Average instruction per cycle for cores",
+							"font": {
+								"color": "#222"
+							}
+						},
+						"paper_bgcolor": "#fff",
+						"plot_bgcolor": "#fff",
+						"font": {
+							"color": "#222"
+						},
+						"autosize": true,
+						"xaxis": {
+							"title": {
+								"text": "timing [ps]"
+							},
+							"type": "linear",
+							"exponentformat": "e",
+							"range": [
+								61419401000,
+								118404401000
+							],
+							"autorange": true
+						},
+						"yaxis": {
+							"title": {
+								"text": "IPC [1/cycle]"
+							},
+							"type": "linear",
+							"range": [
+								-0.12035855520611863,
+								2.2868125489162536
+							],
+							"autorange": true
+						},
+						"legend": {
+							"x": 0,
+							"y": -0.5,
+							"font": {
+								"size": 10
+							},
+							"orientation": "h"
+						}
+					}
+				}
+			},
+			"key": "d"
+		}
+	],
+	"config": [
+		{
+			"name": "default",
+			"profile": {
+				"data": {
+					"external": {
+						"file": "",
+						"url": "",
+						"enableStream": true
+					}
+				},
+				"configurations": {
+					"scripts": {
+						"preprocessor": "",
+						"postprocessor": "",
+						"fileprocessor": ""
+					}
+				}
+			}
+		}
+	]
+}

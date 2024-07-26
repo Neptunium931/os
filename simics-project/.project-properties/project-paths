@@ -1,0 +1,5 @@
+project: /home/neptunium/dev/os/simics-project
+simics-root: /home/neptunium/simics/simics-6.0.198
+simics-model-builder: /home/neptunium/simics/simics-6.0.198
+simics-python: /home/neptunium/simics/simics-6.0.198
+mingw: None
