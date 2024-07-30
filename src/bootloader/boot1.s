@@ -1,13 +1,17 @@
 .intel_syntax noprefix
 .code16
 
-.text
-
-movb al, 'S'
-movb ah, 0x0e
-int  0x10
+boot1:
+	movw bx, OFFSET boot1Start
+	call printString
 
 # set up stack
 movw sp, 0x1000
 
-.org 512*2
+	jmp $
+
+boot1Start:
+	.asciz "boot 1 started"
+
+	.include "src/bootloader/printStrnig.s"
+	.org     512*2

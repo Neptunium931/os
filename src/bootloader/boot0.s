@@ -38,16 +38,23 @@ int  0x13
 cmpb al, 0x02
 jne  display_error
 
-movb al, 'R'
-movb ah, 0x0e
-int  0x10
+movw bx, OFFSET stringBoot1Load
+call printString
 
 	jmp 0x1000
 
 display_error:
-	movb al, 'E'
-	movb ah, 0x0e
-	int  0x10
+	movw bx, OFFSET stringErrorReadingBoot1
+	call printString
+	jmp  $
+
+stringBoot1Load:
+	.asciz "boot 1 loaded\n"
+
+stringErrorReadingBoot1:
+	.asciz "error reading boot1"
+
+	.include "src/bootloader/printStrnig.s"
 
 	.org  510
 	.byte 0x55            #append boot signature
