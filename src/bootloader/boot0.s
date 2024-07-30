@@ -21,6 +21,11 @@ movw sp, 0x7c00
 # enable interrupts
 sti
 
+# set video mode
+xorb ah, ah
+movb al, 0x3 # 80x25 text mode
+int  0x10
+
 # reset floppy controller
 movb ah, 0x0000
 int  0x13
