@@ -40,26 +40,40 @@ movb cl, 0x02
 movb al, 0x02
 int  0x13
 
-cmpb al, 0x02
-jne  display_error
+cmpb al, 0x01
+jne  error_floppy
 
 movw bx, OFFSET stringBoot1Load
 call printString
 
 	jmp 0x1000
+	jmp freeze
+
+error_floppy:
+	movb ah, 0x01
+	int  0x13
+	xorb bh, bh
+	movb bl, ah
+	call printInt
+	jmp  display_error
 
 display_error:
 	movw bx, OFFSET stringErrorReadingBoot1
 	call printString
-	jmp  $
+	jmp  freeze
+
+freeze:
+	jmp $
 
 stringBoot1Load:
 	.asciz "boot 1 loaded  "
 
 stringErrorReadingBoot1:
-	.asciz "error reading boot1"
+	.asciz " error reading boot1 "
 
+include:
 	.include "src/bootloader/printStrnig.s"
+	.include "src/bootloader/printInt.s"
 
 	.org  510
 	.byte 0x55            #append boot signature

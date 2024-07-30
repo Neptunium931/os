@@ -16,6 +16,7 @@ call printInt
 boot1Start:
 	.asciz "boot 1 started  "
 
+include:
 	.include "src/bootloader/printStrnig.s"
 	.include "src/bootloader/printInt.s"
 	.org     512*2
