@@ -8,10 +8,14 @@ boot1:
 # set up stack
 movw sp, 0x1000
 
+movw bx, 1234
+call printInt
+
 	jmp $
 
 boot1Start:
-	.asciz "boot 1 started"
+	.asciz "boot 1 started  "
 
 	.include "src/bootloader/printStrnig.s"
+	.include "src/bootloader/printInt.s"
 	.org     512*2

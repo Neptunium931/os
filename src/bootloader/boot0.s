@@ -54,7 +54,7 @@ display_error:
 	jmp  $
 
 stringBoot1Load:
-	.asciz "boot 1 loaded\n"
+	.asciz "boot 1 loaded  "
 
 stringErrorReadingBoot1:
 	.asciz "error reading boot1"
