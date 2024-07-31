@@ -40,7 +40,7 @@ movb cl, 0x02
 movb al, 0x02
 int  0x13
 
-cmpb al, 0x01
+cmpb al, 0x02
 jne  error_floppy
 
 movw bx, OFFSET stringBoot1Load

@@ -8,9 +8,6 @@ boot1:
 # set up stack
 movw sp, 0x1000
 
-movw bx, 1234
-call printInt
-
 	jmp $
 
 boot1Start:
