@@ -25,10 +25,23 @@ call printString
 movw bx, ax
 call printInt
 
+movw bx, OFFSET sapce
+call printString
+
+# enable A20
+in   al, 0x92
+or   al, 0x02
+out  0x92, al
+movw bx, OFFSET enableA20
+call printString
+
 	jmp $
 
 boot1Start:
 	.asciz "boot 1 started  "
+
+enableA20:
+	.asciz "enable A20"
 
 sapce:
 	.asciz " "
