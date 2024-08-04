@@ -1,0 +1,3 @@
+[submodule "simics-project/boardCustom/seabios"]
+	path = simics-project/boardCustom/seabios
+	url = https://git.seabios.org/seabios.git
