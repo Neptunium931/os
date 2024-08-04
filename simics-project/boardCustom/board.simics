@@ -1,0 +1,27 @@
+decl {
+}
+local $bios_image = "./seabios/out/bios.bin"
+local $enable_efi = FALSE
+
+
+load-module pci-comp
+load-module std-comp
+## load-module class = "processor-" ## TODO find a way to use this 
+
+load-module x58-ich10-comp
+load-module memory-comp
+load-module textcon
+load-module graphcon
+load-module console-components
+
+local $machine_name = "seabios"
+$system = (create-chassis-qsp-x86 name = $machine_name)
+
+
+$mac_address = (get-auto-mac-address)
+
+
+@import time
+
+## use current host time: bad for repeatability, good for usability
+$rtc_time = `time.strftime("%y-%m-%d %h:%m:%s")`
