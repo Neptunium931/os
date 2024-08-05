@@ -26,5 +26,5 @@ gdt_data:
 
 gdt_end:
 gdt_descriptor:
-	.word gdt_end - gdt_start - 1
+	.word gdt_end - gdt_start- 1
 	.long gdt_start

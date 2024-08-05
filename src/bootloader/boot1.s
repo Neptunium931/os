@@ -56,18 +56,22 @@ include:
 	.code32
 
 _main32:
-	movw ax, DATA_SEG
-	movw ds, ax
-	movw es, ax
-	movw fs, ax
-	movw gs, ax
-	movw ss, ax
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	mov ax, DATA_SEG
+	mov ds, ax
+	mov ss, ax
 
-# set up stack
-mov ebp, 0x90000
-mov esp, ebp
+	mov esp, 0x90000
+
+	mov WORD PTR [0xB8000], 'P'
+	mov WORD PTR [0xB8001], 0x1B
 
 end:
-	jmp $
+	jmp end
 
 .org 512*2
