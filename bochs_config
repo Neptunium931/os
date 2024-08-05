@@ -1,5 +1,5 @@
-romimage: file=/home/user/port/bochs-2.8/bios/BIOS-bochs-latest
-vgaromimage: file=/home/user/port/bochs-2.8/bios/VGABIOS-elpin-2.40
+romimage: file=/home/neptunium/port/bochs-2.8/bios/BIOS-bochs-latest
+vgaromimage: file=/home/neptunium/port/bochs-2.8/bios/VGABIOS-elpin-2.40
 floppya: 1_44=./src/floppy.img, status=inserted
 boot: floppy
 mouse: enabled=0

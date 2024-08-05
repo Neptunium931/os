@@ -1,12 +1,12 @@
 .equ CODE_SEG, gdt_code - gdt_start
 .equ DATA_SEG, gdt_data - gdt_start
 
-.section .data
-
 gdt_start:
 gdt_null:
-	.long 0x00000000
-	.long 0x00000000
+	.word 0
+	.word 0
+	.word 0
+	.word 0
 
 gdt_code:
 	.word 0xFFFF

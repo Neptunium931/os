@@ -53,25 +53,17 @@ include:
 	.include "src/bootloader/gdt.s"
 	.include "src/bootloader/protectMode.s"
 
-	.code32
-
 _main32:
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
+	.code32
 	mov ax, DATA_SEG
 	mov ds, ax
-	mov ss, ax
+	mov es, ax
+	mov fs, ax
+	mov gs, ax
 
 	mov esp, 0x90000
 
-	mov WORD PTR [0xB8000], 'P'
-	mov WORD PTR [0xB8001], 0x1B
+	mov WORD PTR [0xb8000], 'P'
+	mov WORD PTR [0xb8001], 0x07
 
-end:
-	jmp end
-
-.org 512*2
+	jmp $
