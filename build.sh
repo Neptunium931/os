@@ -24,6 +24,10 @@ linkBoot1="i686-elf-ld -Ttext 0x1000 -o src/bootloader/boot1.bin src/bootloader/
 printf_line $linkBoot1
 $($linkBoot1)
 
+buildKernelEntry="i686-elf-as ./src/kernel/kernelEntry.s -o ./src/kernel/kernelEntry.o"
+printf_line $buildKernelEntry
+$($buildKernelEntry)
+
 buildFlopy="dd if=/dev/zero of=src/floppy.img bs=512 count=2880"
 printf_line $buildFlopy
 $($buildFlopy)
