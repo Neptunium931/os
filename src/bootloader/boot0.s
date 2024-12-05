@@ -72,8 +72,8 @@ stringErrorReadingBoot1:
 	.asciz " error reading boot1 "
 
 include:
-	.include "src/bootloader/printStrnig.s"
-	.include "src/bootloader/printInt.s"
+	.include "printStrnig.s"
+	.include "printInt.s"
 
 	.org  510
 	.byte 0x55            #append boot signature
